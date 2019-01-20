@@ -1,15 +1,15 @@
 import { News } from '../models/news.model';
 
-export class FetchNews {
-  static readonly type = '[News] Fetch News';
+export class LoadNews {
+  static readonly type = '[News] Load News';
 }
 
-export class FetchNewsSuccess {
-  static readonly type = '[News] Fetch News Success';
+export class LoadNewsSuccess {
+  static readonly type = '[News] Load News Success';
   constructor(public readonly payload: News[]) {}
 }
 
-export class FetchNewsFail {
-  static readonly type = '[News] Fetch News Fail';
+export class LoadNewsFail {
+  static readonly type = '[News] Load News Fail';
   constructor(public readonly payload?: any) {}
 }
