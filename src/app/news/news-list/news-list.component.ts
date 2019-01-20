@@ -12,7 +12,7 @@ import { News } from '../models/news.model';
 })
 export class NewsListComponent implements OnInit {
 
-  @Select(newsStore.NewsState) news$: Observable<News[]>;
+  @Select(newsStore.NewsState.news) news$: Observable<News[]>;
 
   constructor(private store: Store) {
     store.dispatch(new newsStore.LoadNews());

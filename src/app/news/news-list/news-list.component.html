@@ -1,3 +1,5 @@
-<p>
-  news-list works!
-</p>
+<div *ngIf="(news$ | async) as news">
+  <div *ngFor="let item of news">
+    <div>* {{ item.title }}</div>
+  </div>
+</div>
