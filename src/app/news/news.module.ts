@@ -7,6 +7,7 @@ import { NewsRoutingModule } from './news-routing.module';
 import * as store from './store';
 import { NewsComponent } from './news.component';
 import { NewsListComponent } from './news-list/news-list.component';
+import { NewsMaterialModule } from './news-material.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NewsListComponent } from './news-list/news-list.component';
   imports: [
     CommonModule,
     HttpClientModule,
+    NewsMaterialModule,
     NewsRoutingModule,
     NgxsModule.forFeature([store.NewsState])
   ]
