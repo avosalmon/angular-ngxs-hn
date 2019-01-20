@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxsModule } from '@ngxs/store';
 
 import { NewsRoutingModule } from './news-routing.module';
+import * as store from './store';
 import { NewsComponent } from './news.component';
 import { NewsListComponent } from './news-list/news-list.component';
 
@@ -14,7 +16,8 @@ import { NewsListComponent } from './news-list/news-list.component';
   imports: [
     CommonModule,
     HttpClientModule,
-    NewsRoutingModule
+    NewsRoutingModule,
+    NgxsModule.forFeature([store.NewsState])
   ]
 })
 export class NewsModule { }
