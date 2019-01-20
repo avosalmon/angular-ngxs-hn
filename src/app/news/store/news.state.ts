@@ -37,7 +37,7 @@ export class NewsState {
   }
 
   @Action(newsActions.LoadNews)
-  fetchNews(ctx: StateContext<NewsStateModel>) {
+  loadNews(ctx: StateContext<NewsStateModel>) {
     ctx.patchState({ loading: true });
 
     const state = ctx.getState();
@@ -50,7 +50,7 @@ export class NewsState {
   }
 
   @Action(newsActions.LoadNewsSuccess)
-  fetchNewsSuccess(ctx: StateContext<NewsStateModel>, action: newsActions.LoadNewsSuccess) {
+  loadNewsSuccess(ctx: StateContext<NewsStateModel>, action: newsActions.LoadNewsSuccess) {
     ctx.patchState({
       news: action.payload,
       loading: false
@@ -58,7 +58,7 @@ export class NewsState {
   }
 
   @Action(newsActions.LoadNewsFail)
-  fetchNewsfail(ctx: StateContext<NewsStateModel>, action: newsActions.LoadNewsFail) {
+  loadNewsfail(ctx: StateContext<NewsStateModel>, action: newsActions.LoadNewsFail) {
     ctx.patchState({ loading: false });
     window.alert(action.payload);
   }
