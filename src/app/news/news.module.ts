@@ -8,11 +8,13 @@ import * as store from './store';
 import { NewsComponent } from './news.component';
 import { NewsListComponent } from './containers/news-list/news-list.component';
 import { NewsMaterialModule } from './news-material.module';
+import { NewsItemComponent } from './components/news-item/news-item.component';
 
 @NgModule({
   declarations: [
     NewsComponent,
-    NewsListComponent
+    NewsListComponent,
+    NewsItemComponent
   ],
   imports: [
     CommonModule,

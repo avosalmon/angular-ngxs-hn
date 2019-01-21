@@ -1,5 +1,5 @@
 <div *ngIf="(news$ | async) as news">
-  <div *ngFor="let item of news">
-    <div>* {{ item.title }}</div>
-  </div>
+  <app-news-item *ngFor="let item of news"
+    [news]="item">
+  </app-news-item>
 </div>
