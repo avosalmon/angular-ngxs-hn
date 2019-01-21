@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NewsComponent } from './news.component';
-import { NewsListComponent } from './news-list/news-list.component';
+import { NewsListComponent } from './containers/news-list/news-list.component';
 
 const routes: Routes = [
   {

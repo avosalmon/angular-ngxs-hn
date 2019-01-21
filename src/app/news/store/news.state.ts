@@ -60,6 +60,6 @@ export class NewsState {
   @Action(newsActions.LoadNewsFail)
   loadNewsfail(ctx: StateContext<NewsStateModel>, action: newsActions.LoadNewsFail) {
     ctx.patchState({ loading: false });
-    window.alert(action.payload);
+    window.alert(action.payload.message);
   }
 }

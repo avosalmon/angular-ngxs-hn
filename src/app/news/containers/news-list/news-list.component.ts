@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';
-import * as newsStore from '../store';
-import { News } from '../models/news.model';
+import * as newsStore from '../../store';
+import { News } from '../../models/news.model';
 
 @Component({
   selector: 'app-news-list',
@@ -14,11 +14,10 @@ export class NewsListComponent implements OnInit {
 
   @Select(newsStore.NewsState.news) news$: Observable<News[]>;
 
-  constructor(private store: Store) {
-    store.dispatch(new newsStore.LoadNews());
-  }
+  constructor(private store: Store) {}
 
   ngOnInit() {
+    this.store.dispatch(new newsStore.LoadNews());
   }
 
 }
