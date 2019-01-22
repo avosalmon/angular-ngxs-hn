@@ -9,12 +9,14 @@ import { NewsComponent } from './news.component';
 import { NewsListComponent } from './containers/news-list/news-list.component';
 import { NewsMaterialModule } from './news-material.module';
 import { NewsItemComponent } from './components/news-item/news-item.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     NewsComponent,
     NewsListComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    PaginationComponent
   ],
   imports: [
     CommonModule,
