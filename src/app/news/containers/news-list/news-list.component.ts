@@ -22,4 +22,8 @@ export class NewsListComponent implements OnInit {
     this.store.dispatch(new newsStore.LoadNews());
   }
 
+  onPageChange(page: number) {
+    this.store.dispatch(new newsStore.ChangePage(page));
+  }
+
 }

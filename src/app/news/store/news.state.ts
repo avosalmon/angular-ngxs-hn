@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { tap, catchError } from 'rxjs/operators';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
+import { catchError, tap } from 'rxjs/operators';
 import { News } from '../models/news.model';
 import * as newsActions from './news.actions';
 
@@ -19,7 +19,7 @@ export interface NewsStateModel {
   }
 })
 export class NewsState {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   @Selector()
   static news(state: NewsStateModel) {
@@ -61,5 +61,11 @@ export class NewsState {
   loadNewsfail(ctx: StateContext<NewsStateModel>, action: newsActions.LoadNewsFail) {
     ctx.patchState({ loading: false });
     window.alert(action.payload.message);
+  }
+
+  @Action(newsActions.ChangePage)
+  changePage(ctx: StateContext<NewsStateModel>, action: newsActions.ChangePage) {
+    ctx.patchState({ page: action.payload });
+    ctx.dispatch(new newsActions.LoadNews());
   }
 }

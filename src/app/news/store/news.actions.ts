@@ -6,10 +6,15 @@ export class LoadNews {
 
 export class LoadNewsSuccess {
   static readonly type = '[News] Load News Success';
-  constructor(public readonly payload: News[]) {}
+  constructor(public readonly payload: News[]) { }
 }
 
 export class LoadNewsFail {
   static readonly type = '[News] Load News Fail';
-  constructor(public readonly payload?: any) {}
+  constructor(public readonly payload?: any) { }
+}
+
+export class ChangePage {
+  static readonly type = '[News] Change Page';
+  constructor(public readonly payload: number) { }
 }
