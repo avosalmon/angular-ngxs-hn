@@ -1,5 +1,5 @@
 <app-pagination [page]="page$ | async"></app-pagination>
-<div *ngIf="(news$ | async) as news">
+<div class="container" *ngIf="(news$ | async) as news">
   <app-news-item *ngFor="let item of news"
     [news]="item">
   </app-news-item>
