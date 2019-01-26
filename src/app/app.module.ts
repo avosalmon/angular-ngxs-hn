@@ -1,13 +1,13 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppMaterialModule } from './app-material.module';
-import { AppComponent } from './app.component';
+import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
+import { AppMaterialModule } from './app-material.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +18,12 @@ import { environment } from 'src/environments/environment';
     BrowserAnimationsModule,
     AppRoutingModule,
     AppMaterialModule,
-    NgxsModule.forRoot([], { developmentMode: !environment.production }),
-    NgxsReduxDevtoolsPluginModule.forRoot()
+    NgxsModule.forRoot([], {
+      developmentMode: !environment.production
+    }),
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
