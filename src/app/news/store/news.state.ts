@@ -11,7 +11,7 @@ export interface NewsStateModel {
 }
 
 @State<NewsStateModel>({
-  name: 'news',
+  name: 'newsState',
   defaults: {
     news: [],
     page: 1,
