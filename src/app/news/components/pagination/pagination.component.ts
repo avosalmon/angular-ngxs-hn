@@ -13,13 +13,13 @@ export class PaginationComponent {
 
   onPrev() {
     if (this.page > 1) {
-      this.page--;
-      this.pageChanded.emit(this.page);
+      const prev = this.page - 1;
+      this.pageChanded.emit(prev);
     }
   }
 
   onNext() {
-    this.page++;
-    this.pageChanded.emit(this.page);
+    const next = this.page + 1;
+    this.pageChanded.emit(next);
   }
 }
