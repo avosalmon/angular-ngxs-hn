@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { PaginationComponent } from './pagination.component';
 
 describe('PaginationComponent', () => {
@@ -8,9 +8,11 @@ describe('PaginationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaginationComponent ]
-    })
-    .compileComponents();
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [PaginationComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,7 @@ describe('PaginationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('create component', () => {
     expect(component).toBeTruthy();
   });
 });
