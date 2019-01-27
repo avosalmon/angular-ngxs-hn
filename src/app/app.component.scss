@@ -1,5 +1,12 @@
 mat-toolbar {
+  display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 9999;
+}
+
+.github img {
+  height: 32px;
+  vertical-align: middle;
 }
