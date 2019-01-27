@@ -25,3 +25,12 @@ app-news-item {
   align-items: center;
   justify-content: center;
 }
+
+@media (min-width: 600px) {
+  app-pagination {
+    padding: 0 25%;
+  }
+  .container {
+    padding: 1rem 25%;
+  }
+}

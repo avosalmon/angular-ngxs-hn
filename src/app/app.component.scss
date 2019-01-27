@@ -14,3 +14,9 @@ mat-toolbar {
 .content {
   padding-bottom: 1rem;
 }
+
+@media (min-width: 600px) {
+  mat-toolbar {
+    padding: 0 25%;
+  }
+}
