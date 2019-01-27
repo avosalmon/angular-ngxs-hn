@@ -1,4 +1,4 @@
-# Angular NGXS Hackernews
+# Angular NGXS Hacker News
 https://angular-ngxs-hackernews.netlify.com
 
 ## Development server
