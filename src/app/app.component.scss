@@ -10,3 +10,8 @@ mat-toolbar {
   height: 32px;
   vertical-align: middle;
 }
+
+.content {
+  max-height: 90%;
+  overflow-y: scroll;
+}

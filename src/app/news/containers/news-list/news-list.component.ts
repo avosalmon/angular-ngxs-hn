@@ -17,6 +17,8 @@ export class NewsListComponent implements OnInit {
 
   @Select(newsStore.NewsState.page) page$: Observable<number>;
 
+  @Select(newsStore.NewsState.loading) loading$: Observable<boolean>;
+
   constructor(
     private store: Store,
     private route: ActivatedRoute,
