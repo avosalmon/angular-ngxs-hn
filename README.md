@@ -1,6 +1,5 @@
-# AngularNgxsHn
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+# Angular NGXS Hackernews
+https://angular-ngxs-hackernews.netlify.com
 
 ## Development server
 
