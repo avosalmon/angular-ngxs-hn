@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { News } from '../../models/news.model';
@@ -16,14 +17,14 @@ export class NewsListComponent implements OnInit {
 
   @Select(newsStore.NewsState.page) page$: Observable<number>;
 
-  constructor(private store: Store) { }
+  constructor(
+    private store: Store,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
-    this.store.dispatch(new newsStore.LoadNews());
+    this.route.params.subscribe(params =>
+      this.store.dispatch(new newsStore.ChangePage(+params.page))
+    );
   }
-
-  onPageChange(page: number) {
-    this.store.dispatch(new newsStore.ChangePage(page));
-  }
-
 }

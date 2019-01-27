@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { NewsComponent } from './news.component';
+import { RouterModule, Routes } from '@angular/router';
 import { NewsListComponent } from './containers/news-list/news-list.component';
+import { NewsComponent } from './news.component';
 
 const routes: Routes = [
   {
@@ -9,7 +9,7 @@ const routes: Routes = [
     component: NewsComponent,
     children: [
       {
-        path: '',
+        path: ':page',
         component: NewsListComponent
       }
     ]

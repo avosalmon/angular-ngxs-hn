@@ -1,5 +1,6 @@
 <div class="container">
-  <span (click)="onPrev()">< prev</span>
+  <a routerLink="/news/{{ prevPage() }}" *ngIf="prevPage() > 0">< prev</a>
+  <span class="disabled" *ngIf="prevPage() < 1">< prev</span>
   <span>{{ page }}</span>
-  <span (click)="onNext()">next ></span>
+  <a routerLink="/news/{{ nextPage() }}">next ></a>
 </div>
