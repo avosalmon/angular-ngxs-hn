@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    image: node:10-alpine
+    volumes:
+      - .:${PWD}
+      - yarn-cache:/usr/local/share/.cache/yarn/v4
+    working_dir: ${PWD}
+
+volumes:
+  yarn-cache:
