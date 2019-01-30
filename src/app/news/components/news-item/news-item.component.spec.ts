@@ -34,7 +34,7 @@ describe('NewsItemComponent', () => {
     fixture.detectChanges();
   });
 
-  test('create component', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
