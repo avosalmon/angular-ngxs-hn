@@ -8,6 +8,10 @@ import { Component, Input } from '@angular/core';
 export class PaginationComponent {
   @Input() page: number;
 
+  get hasPrevPage(): boolean {
+    return this.prevPage > 1;
+  }
+
   get prevPage(): number {
     return this.page - 1;
   }
