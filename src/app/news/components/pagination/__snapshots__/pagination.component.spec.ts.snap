@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaginationComponent should match snapshot 1`] = `
+<app-pagination
+  page={[Function Number]}
+>
+  <div
+    class="container"
+  >
+    
+    
+    <span
+      class="disabled"
+    >
+      &lt; prev
+    </span>
+    <span>
+      1
+    </span>
+    <a
+      href="/news/2"
+      ng-reflect-router-link="/news/2"
+    >
+      next &gt;
+    </a>
+  </div>
+</app-pagination>
+`;

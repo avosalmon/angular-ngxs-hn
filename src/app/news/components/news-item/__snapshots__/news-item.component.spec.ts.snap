@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsItemComponent should match snapshot 1`] = `
+<app-news-item
+  news={[Function Object]}
+>
+  <div
+    class="title"
+  >
+    <a
+      href="https://www.project-syndicate.org/onpoint/the-ai-threat-to-open-societies-by-george-soros-2019-01"
+    >
+      The AI Threat to Open Societies
+    </a>
+  </div><div
+    class="info"
+  >
+    <span>
+      42 points 
+    </span>
+    <span>
+      by malloryerik 
+    </span>
+    <span>
+      3 hours ago 
+    </span>
+    <span>
+      | 41 comments
+    </span>
+  </div>
+</app-news-item>
+`;
