@@ -61,6 +61,7 @@ describe('NewsListComponent', () => {
       fixture.detectChanges();
       params$.next({ page: page });
 
+      expect(spy).toHaveBeenCalledTimes(1);
       expect(spy).toHaveBeenCalledWith(action);
     });
   });
