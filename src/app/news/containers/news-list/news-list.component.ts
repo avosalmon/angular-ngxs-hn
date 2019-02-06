@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { News } from '../../models/news.model';
-import * as newsStore from '../../store';
+import { ChangePage, NewsState } from '../../store';
 
 @Component({
   selector: 'app-news-list',
@@ -13,11 +13,11 @@ import * as newsStore from '../../store';
 })
 export class NewsListComponent implements OnInit {
 
-  @Select(newsStore.NewsState.news) news$: Observable<News[]>;
+  @Select(NewsState.news) news$: Observable<News[]>;
 
-  @Select(newsStore.NewsState.page) page$: Observable<number>;
+  @Select(NewsState.page) page$: Observable<number>;
 
-  @Select(newsStore.NewsState.loading) loading$: Observable<boolean>;
+  @Select(NewsState.loading) loading$: Observable<boolean>;
 
   constructor(
     private store: Store,
@@ -26,7 +26,7 @@ export class NewsListComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params =>
-      this.store.dispatch(new newsStore.ChangePage(+params.page))
+      this.store.dispatch(new ChangePage(+params.page))
     );
   }
 }
