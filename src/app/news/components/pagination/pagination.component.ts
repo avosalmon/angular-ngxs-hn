@@ -8,11 +8,11 @@ import { Component, Input } from '@angular/core';
 export class PaginationComponent {
   @Input() page: number;
 
-  prevPage(): number {
+  get prevPage(): number {
     return this.page - 1;
   }
 
-  nextPage(): number {
+  get nextPage(): number {
     return this.page + 1;
   }
 }
