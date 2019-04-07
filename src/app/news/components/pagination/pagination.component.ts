@@ -9,7 +9,7 @@ export class PaginationComponent {
   @Input() page: number;
 
   get hasPrevPage(): boolean {
-    return this.prevPage > 1;
+    return this.prevPage > 0;
   }
 
   get prevPage(): number {
