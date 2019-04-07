@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/71638957-11f1-41f8-acfd-997032bdbe5a/deploy-status)](https://app.netlify.com/sites/angular-ngxs-hackernews/deploys)
+
 # Angular NGXS Hacker News
 https://angular-ngxs-hackernews.netlify.com
 
