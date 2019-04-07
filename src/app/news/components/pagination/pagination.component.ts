@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss']
 })
