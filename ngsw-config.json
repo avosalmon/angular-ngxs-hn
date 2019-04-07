@@ -22,5 +22,19 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "hackernews-api",
+      "urls": [
+        "https://api.hackerwebapp.com/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "1d",
+        "timeout": "10s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
